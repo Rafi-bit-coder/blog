@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "userId": "12asgd",
+      "blog_name": "First Posts",
+      "point": "I make this blog website for my portfolio.",
+      "comments": [],
+      "up": 0,
+      "down": 0
+    },
+    {
+      "id": "2",
+      "userId": "12asgd",
+      "blog_name": "testing more than one blog",
+      "point": "this were made to see whats going to happen when theres more than one blog",
+      "comments": [],
+      "up": 0,
+      "down": 0
+    },
+    {
+      "id": "12asgd - a6624137-dc99-4c4c-968c-8c3589d17b25",
+      "userid": "12asgd",
+      "blog_name": "the first POST method",
+      "point": "hello again, this time i post this blog using fetch POST method.",
+      "comment": [],
+      "up": 0,
+      "down": 0
+    },
+    {
+      "id": "12asgd - 1e10aa59-cda2-4938-bc67-2a74460d7a0b",
+      "userid": "12asgd",
+      "blog_name": "third blog",
+      "point": "hello again, im still debuggin this pageplease be nice with this page okayand please report any bugs or vulnerability",
+      "comment": [],
+      "up": 0,
+      "down": 0
+    },
+    {
+      "id": "12asgd - 28f6dde0-e6a0-47ce-9073-a182d6537195",
+      "userid": "12asgd",
+      "blog_name": "hello there",
+      "point": "this is the fourth post of this blog",
+      "comment": [],
+      "up": 0,
+      "down": 0
+    },
+    {
+      "id": "12asgd - f2ba0e68-3255-4dd1-81e1-2b975c049b94",
+      "userid": "12asgd",
+      "blog_name": "testing",
+      "point": "new id update",
+      "comment": [],
+      "up": 0,
+      "down": 0
+    }
+  ],
+  "user": [
+    {
+      "id": "12asgd",
+      "userName": "Developer",
+      "postedBlog": [
+        {
+          "id": "12asgd - a6624137-dc99-4c4c-968c-8c3589d17b25"
+        },
+        {
+          "id": "12asgd - 1e10aa59-cda2-4938-bc67-2a74460d7a0b"
+        },
+        {
+          "id": "12asgd - 28f6dde0-e6a0-47ce-9073-a182d6537195"
+        },
+        {
+          "id": "12asgd - f2ba0e68-3255-4dd1-81e1-2b975c049b94"
+        }
+      ]
+    },
+    {
+      "userId": "testing bot"
+    }
+  ]
+}
