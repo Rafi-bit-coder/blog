@@ -2,7 +2,27 @@ const username = "12asgd"
 const POST_BUTTON = document.querySelector('.post-blog')
 const POINT_TEXT = document.querySelector('.post-point')
 const POST_NAME = document.querySelector('.post-name')
+const info = document.querySelector('.text-info')
 
+POST_NAME.addEventListener("keydown", function (event) {
+    if (POST_NAME.textContent.length >= 35 && event.key !== "Backspace") {
+        event.preventDefault(); // Stop extra input
+        info.textContent = "Cannot write more than that";
+    }
+});
+
+// POST_NAME.addEventListener("change", overWrite)
+
+// function overWrite() {
+//     console.log(POST_NAME.textContent.length)
+//     if(POST_NAME.textContent.length > 35) {
+//         POST_NAME.textContent = POST_NAME.textContent.slice(34, POST_NAME.textContent.length)
+//         info.textContent = "cannot write more than that"
+//         console.log('test')
+//     } else {
+//         info.textContent = ""
+//     }
+// }
 
 async function POST_BLOG() {
     if(POINT_TEXT.textContent === '') {
@@ -23,13 +43,18 @@ async function POST_BLOG() {
         }
 
         // user data update
-        let response = await fetch('http://127.0.0.1:3000/user/12asgd')
-        let userData = await response.json()
-        userData.postedBlog.push({id: username + " - " + blogid })
-        console.log(userData.postedBlog)
+        let response = await fetch(`http://127.0.0.1:8080/user?id=${username}`, {method: "GET"})
+
+        // old method
+        // let userData = await response.json()
+        // userData.postedBlog.push({id: username + " - " + blogid })
+        // console.log(userData.postedBlog)
         
-        fetch('http://127.0.0.1:3000/posts', {method: "POST", body: JSON.stringify(blog)})
-        fetch('http://127.0.0.1:3000/user/' + username, {method: "PATCH", body: JSON.stringify({  postedBlog: userData.postedBlog })})
+        // fetch("http://localhost:8080/posts", {method: "POST", body: JSON.stringify(blog) })
+        // let data = await res.json()
+        // info.textContent = data
+        // fetch('http://127.0.0.1:3000/posts', {method: "POST", body: JSON.stringify(blog)})
+        // fetch('http://127.0.0.1:3000/user/' + username, {method: "PATCH", body: JSON.stringify({  postedBlog: userData.postedBlog })})
     }
 
 }

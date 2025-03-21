@@ -17,7 +17,7 @@ ws.onmessage = (event) => {
             </a>
         `
     })
-    console.log('data dari server: ', JSON.parse(data))
+    console.log('data dari server: ', data)
 }
 
 ws.onclose = () => {

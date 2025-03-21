@@ -28,10 +28,15 @@
 .post-name{
     display: inline-block;
     background-color: rgb(226, 226, 226);
+    width: auto;
     min-width: 15%;
-    max-width: 15%;
-    font-size: 1.5em;
-    padding: .4em;
+    max-width: 30%;
+    /* height: 35px; */
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.1em;
+    padding-left: .4em;
+    padding-right: .4em;
     margin-left: 1em;
     border-radius: .5em;
 }
