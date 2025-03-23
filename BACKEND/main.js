@@ -1,8 +1,6 @@
-// const db = require("../API/db.json")
 const fs = require('fs')
 const ws = require('ws')
 const http = require('http')
-const { url } = require('inspector')
 let previusData = null
 
 const readJsonFile = () => {
@@ -59,9 +57,7 @@ const server = http.createServer(async (req, res) => {
 const wss = new ws.Server({  server })
 
 wss.on('connection', (ws) => {
-    console.log('client connected')
-    
-    // console.log(JSON.stringify(db))
+    console.log('client connected: ', wss.clients.size)
     
     fetch("http://127.0.0.1:3000/posts")
     .then(res => res.json())
@@ -78,17 +74,14 @@ wss.on('connection', (ws) => {
         }
     })
 
-    // setInterval(() => {ws.send('hello there')}, 2000)
-
     ws.on("message", (message) => {
         let data = message.toString("utf-8")
 
-        // if()
         console.log('received message: ', data)
     })
 
     ws.on("close", () => {
-        console.log('client disconnected')
+        console.log('client disconnected: ', wss.clients.size)
     })
 })
 
