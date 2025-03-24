@@ -4,9 +4,9 @@ const POINT_TEXT = document.querySelector('.post-point')
 const POST_NAME = document.querySelector('.post-name')
 const info = document.querySelector('.text-info')
 
-POST_NAME.addEventListener("keydown", function (event) {
-    if (POST_NAME.textContent.length >= 35 && event.key !== "Backspace") {
-        event.preventDefault(); // Stop extra input
+POST_NAME.addEventListener("keydown", (e) => {
+    if (POST_NAME.textContent.length >= 35 && e.key !== "Backspace") {
+        e.preventDefault(); // Stop extra input
         info.textContent = "Cannot write more than that";
     }
 });
@@ -43,7 +43,7 @@ async function POST_BLOG() {
         }
 
         // user data update
-        let response = await fetch(`http://127.0.0.1:8080/user?id=${username}`, {method: "GET"})
+        let response = await fetch(`http://127.0.0.1:8080/posts`, {method: "POST", body: JSON.stringify({user: username, body: blog})})
 
         // old method
         // let userData = await response.json()

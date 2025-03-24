@@ -4,8 +4,15 @@ const BLOG_CREATOR = document.querySelector('.blog-creator')
 const urlparam = new window.URLSearchParams(document.location.search)
 const id = urlparam.get('id')
 
-fetch(`http://127.0.0.1:8080/posts?id=${id}`)
-.then()
+console.log(id)
+fetch(`http://127.0.0.1:8080/posts?id=${id}`, {method: "GET"})
+.then(res => res.json())
+.then(res => {
+    let data = res[0]
+
+    
+})
+.catch(err => container.textContent = `tell the CS that the posts page is broken`)
 // fetch(`http://127.0.0.1:3000/posts?id=${id}`)
 // .then(res => res.json())
 // .then(res => {
