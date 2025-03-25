@@ -1,13 +1,17 @@
 const container = document.querySelector('.container')
-const BLOG_POST = document.querySelector('.blog-post')
-const BLOG_CREATOR = document.querySelector('.blog-creator')
 const urlparam = new window.URLSearchParams(document.location.search)
 const id = urlparam.get('id')
+
+// blog container
+const BLOG_POST = document.querySelector('.blog-post')
+const BLOG_CREATOR = document.querySelector('.blog-creator')
+
+// comment section
+
 
 fetch(`http://127.0.0.1:8080/posts?id=${id}`, {method: "GET"})
 .then(res => res.json())
 .then(data => {
-    console.log(data)
     BLOG_POST.innerHTML = `
         <h1>${data.body.blog_name}</h1>
         <h3>${data.body.point}</h3>
