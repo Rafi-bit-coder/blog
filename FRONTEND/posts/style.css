@@ -23,3 +23,43 @@ h3{
 .rating-section{
     margin-top: 1.5em;
 }
+
+/* comment section */
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: .2em;
+}
+
+.comment-point{
+    height: 100px;
+    background-color: rgb(243, 243, 243);
+}
+
+.add-comment{
+    background-color: rgb(228, 228, 228);
+    border: none;
+}
+
+.add-comment:focus{
+    outline: none;
+}
+
+.post-comment{
+    display: none;
+    width: 80%;
+    justify-content: center;
+    background-color: rgb(40, 211, 40);
+    opacity: 0;
+    transition: all .3s;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    border: none;
+}
+
+.show{
+    display: flex;
+    opacity: 1;
+}

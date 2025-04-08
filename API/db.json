@@ -5,7 +5,13 @@
       "userid": "12asgd",
       "blog_name": "First Posts",
       "point": "I make this blog website for my portfolio.",
-      "comments": [],
+      "comments": [
+        {
+          "id": "1",
+          "userid": "12asgd",
+          "point": "this is written straight from the database not from the comment section "
+        }
+      ],
       "up": 0,
       "down": 0
     },

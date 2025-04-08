@@ -42,7 +42,7 @@ const server = http.createServer(async (req, res) => {
         // get user id
         let user = await fetch(`http://127.0.0.1:3000/user/${data.userid}`)
         let userdata = await user.json()
-        res.end(JSON.stringify({userid: userdata, body: data}))
+         res.end(JSON.stringify({userid: userdata, body: data}))
     }   else {
         res.end()
     }
