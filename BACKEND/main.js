@@ -3,7 +3,7 @@ const http = require('http')
 const server = http.createServer(async (req, res) => {
     const URL = req.url
     const METHOD = req.method
-    res.writeHead(200, {    "Content-Type": "application/json",
+    res.writeHead(200, {    "Content-Type": "text/json",
         "access-control-allow-origin": "*"
         })
     

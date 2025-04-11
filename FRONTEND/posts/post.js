@@ -12,7 +12,6 @@ const comment_value = document.querySelector('.add-comment')
 const post_comment = document.querySelector('.post-comment')
 
 comment_value.addEventListener('input', (e) => {
-    console.log(e.target.value)
     autoResize(e.target)
     e.target.value.length !== 0 ? post_comment.classList.add('show') : post_comment.classList.remove('show')
 })
@@ -40,13 +39,20 @@ fetch(`http://127.0.0.1:8080/posts?id=${id}`, {method: "GET"})
     BLOG_CREATOR.innerHTML = `
         <h2>${data.userid.userName}</h2>
     `
-    data.body.comments.map(a => {
-        comment_container.innerHTML = `
-            <div class="${a.userid}-${a.id}" >
-                <a href="#">${a.userid}</a>
-                <p>${a.point}</p>
-            </div>
-        `
-    })
+    if(data.body.comments?.length) {
+        console.log('ada')
+        data.body.comments?.map(a => {
+            comment_container.innerHTML = `
+                <div class="comments ${a.id}" >
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="#${a.user.id}">${a.user.username}</a>
+                    <p>${a.message}</p>
+                </div>
+            `
+        })
+    } else {
+        console.log('tidak')
+        comment_container.textContent = `no one has comment yet`
+    }
 })
 .catch(err => {container.textContent = `tell the CS that the posts page is broken`; console.error(`error occured: `, err)})

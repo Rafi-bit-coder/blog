@@ -7,9 +7,14 @@
       "point": "I make this blog website for my portfolio.",
       "comments": [
         {
-          "id": "1",
-          "userid": "12asgd",
-          "point": "this is written straight from the database not from the comment section "
+          "id": "123qweasd-12qw-34er-as23-gdhajbvg124a",
+          "user": {
+            "id": "12asgd",
+            "username": "Developer",
+            "avatar": ""
+          },
+          "message": "i write this comments from the database not from the comment section",
+          "replies": []
         }
       ],
       "up": 0,
@@ -25,7 +30,7 @@
       "down": 0
     },
     {
-      "id": "12asgd - a6624137-dc99-4c4c-968c-8c3589d17b25",
+      "id": "12asgd-a6624137-dc99-4c4c-968c-8c3589d17b25",
       "userid": "12asgd",
       "blog_name": "the first POST method",
       "point": "hello again, this time i post this blog using fetch POST method.",
@@ -34,7 +39,7 @@
       "down": 0
     },
     {
-      "id": "12asgd - 1e10aa59-cda2-4938-bc67-2a74460d7a0b",
+      "id": "12asgd-1e10aa59-cda2-4938-bc67-2a74460d7a0b",
       "userid": "12asgd",
       "blog_name": "third blog",
       "point": "hello again, im still debuggin this pageplease be nice with this page okayand please report any bugs or vulnerability",
@@ -43,7 +48,7 @@
       "down": 0
     },
     {
-      "id": "12asgd - 28f6dde0-e6a0-47ce-9073-a182d6537195",
+      "id": "12asgd-28f6dde0-e6a0-47ce-9073-a182d6537195",
       "userid": "12asgd",
       "blog_name": "hello there",
       "point": "this is the fourth post of this blog",
@@ -52,7 +57,7 @@
       "down": 0
     },
     {
-      "id": "12asgd - f2ba0e68-3255-4dd1-81e1-2b975c049b94",
+      "id": "12asgd-f2ba0e68-3255-4dd1-81e1-2b975c049b94",
       "userid": "12asgd",
       "blog_name": "testing",
       "point": "new id update",
@@ -61,7 +66,7 @@
       "down": 0
     },
     {
-      "id": "12asgd - 3771b717-9813-458b-8b86-fbae8b4c2260",
+      "id": "12asgd-3771b717-9813-458b-8b86-fbae8b4c2260",
       "userid": "12asgd",
       "blog_name": "posting using full backend",
       "point": "this time i post the blog using full backend",
@@ -76,24 +81,30 @@
       "userName": "Developer",
       "postedBlog": [
         {
-          "id": "12asgd - a6624137-dc99-4c4c-968c-8c3589d17b25"
+          "id": "12asgd-a6624137-dc99-4c4c-968c-8c3589d17b25"
         },
         {
-          "id": "12asgd - 1e10aa59-cda2-4938-bc67-2a74460d7a0b"
+          "id": "12asgd-1e10aa59-cda2-4938-bc67-2a74460d7a0b"
         },
         {
-          "id": "12asgd - 28f6dde0-e6a0-47ce-9073-a182d6537195"
+          "id": "12asgd-28f6dde0-e6a0-47ce-9073-a182d6537195"
         },
         {
-          "id": "12asgd - f2ba0e68-3255-4dd1-81e1-2b975c049b94"
+          "id": "12asgd-f2ba0e68-3255-4dd1-81e1-2b975c049b94"
         },
         {
-          "id": "12asgd - 3771b717-9813-458b-8b86-fbae8b4c2260"
+          "id": "12asgd-3771b717-9813-458b-8b86-fbae8b4c2260"
         }
+      ],
+      "comments": [
+
       ]
     },
     {
-      "id": "testing bot"
+      "id": "testing bot",
+      "userName": "bot",
+      "postedBlog": [],
+      "comments": []
     }
   ]
 }

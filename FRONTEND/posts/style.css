@@ -63,3 +63,8 @@ h3{
     display: flex;
     opacity: 1;
 }
+
+.comments{
+    padding-left: 1em;
+    padding-top: .5em;
+}
