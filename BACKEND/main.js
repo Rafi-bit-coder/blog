@@ -29,22 +29,46 @@ const server = http.createServer(async (req, res) => {
 
         res.end()
     } else if(URL.includes('posts') && METHOD === 'GET') {
+        let final = {}
 
         // search params
         let queryString = URL.split('?')[1]
         let params = new URLSearchParams(queryString)
         let id = params.get('id')
 
-        // get blog posts
-        let body = await fetch(`http://127.0.0.1:3000/posts/${id}`)
-        let data = await body.json()
+        try{
+            // get blog posts
+            let body = await fetch(`http://127.0.0.1:3000/posts/${id}`)
+            let data = await body.json()
 
-        // get user id
-        let user = await fetch(`http://127.0.0.1:3000/user/${data.userid}`)
-        let userdata = await user.json()
-         res.end(JSON.stringify({userid: userdata, body: data}))
+            // get user id
+            let user = await fetch(`http://127.0.0.1:3000/user/${data.userid}`)
+            let userdata = await user.json()
+
+            final = {condition: true, userid: userdata, body: data}
+        }
+        catch{
+            final = {condition: false, reason: 'theres something wrong'}
+        }
+        finally{
+            res.end(JSON.stringify(final))
+        }
+
+        // // search params
+        // let queryString = URL.split('?')[1]
+        // let params = new URLSearchParams(queryString)
+        // let id = params.get('id')
+
+        // // get blog posts
+        // let body = await fetch(`http://127.0.0.1:3000/posts/${id}`)
+        // let data = await body.json()
+
+        // // get user id
+        // let user = await fetch(`http://127.0.0.1:3000/user/${data.userid}`)
+        // let userdata = await user.json()
+        // res.end(JSON.stringify({userid: userdata, body: data}))
     }   else {
-        res.end()
+        res.end(JSON.stringify({condition: false, reason: 'what are you doing in here?'}))
     }
 })
 

@@ -32,27 +32,31 @@ fetch(`http://127.0.0.1:8080/posts?id=${id}`, {method: "GET"})
 .then(res => res.json())
 .then(data => {
     console.log(data)
-    BLOG_POST.innerHTML = `
-        <h1>${data.body.blog_name}</h1>
-        <h3>${data.body.point}</h3>
-    `
-    BLOG_CREATOR.innerHTML = `
-        <h2>${data.userid.userName}</h2>
-    `
-    if(data.body.comments?.length) {
-        console.log('ada')
-        data.body.comments?.map(a => {
-            comment_container.innerHTML = `
-                <div class="comments ${a.id}" >
-                    <i class="fa-solid fa-circle-user"></i>
-                    <a href="#${a.user.id}">${a.user.username}</a>
-                    <p>${a.message}</p>
-                </div>
-            `
-        })
+    if(data.condition) {
+        BLOG_POST.innerHTML = `
+            <h1>${data.body.blog_name}</h1>
+            <h3>${data.body.point}</h3>
+        `
+        BLOG_CREATOR.innerHTML = `
+            <h2>${data.userid.userName}</h2>
+        `
+        if(data.body.comments?.length) {
+            console.log('ada')
+            data.body.comments?.map(a => {
+                comment_container.innerHTML = `
+                    <div class="comments ${a.id}" >
+                        <i class="fa-solid fa-circle-user"></i>
+                        <a href="#${a.user.id}">${a.user.username}</a>
+                        <p>${a.message}</p>
+                    </div>
+                `
+            })
+        } else {
+            console.log('tidak')
+            comment_container.textContent = `no one has comment yet`
+        }
     } else {
-        console.log('tidak')
-        comment_container.textContent = `no one has comment yet`
+        
     }
 })
 .catch(err => {container.textContent = `tell the CS that the posts page is broken`; console.error(`error occured: `, err)})
