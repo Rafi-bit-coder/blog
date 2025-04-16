@@ -10,10 +10,40 @@
           "id": "123qweasd-12qw-34er-as23-gdhajbvg124a",
           "user": {
             "id": "12asgd",
-            "username": "Developer",
+            "userName": "Developer",
             "avatar": ""
           },
           "message": "i write this comments from the database not from the comment section",
+          "replies": []
+        },
+        {
+          "id": "34eb7df6-fabe-4cc5-8b86-b4c587eab380",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "i upload this comments from the comment section",
+          "replies": []
+        },
+        {
+          "id": "eb1bdafa-6ad0-4884-9e08-97b9aa4d81bf",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "now somehow the user dont have names",
+          "replies": []
+        },
+        {
+          "id": "f802f75e-fe0f-4ed7-a236-d8a5f2c8ac00",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "oopsiee theres a typo :D",
           "replies": []
         }
       ],
@@ -25,7 +55,28 @@
       "userid": "12asgd",
       "blog_name": "testing more than one blog",
       "point": "this were made to see whats going to happen when theres more than one blog",
-      "comments": [],
+      "comments": [
+        {
+          "id": "4bb78377-9141-4c48-a50b-08ef6df2501c",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "testing a new line or a whitespace\n\na                          tes\n\nasdasd",
+          "replies": []
+        },
+        {
+          "id": "b5796867-4679-4bb4-afdf-2d4119691895",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "somehow it didnt show the new line its just continue from the first line",
+          "replies": []
+        }
+      ],
       "up": 0,
       "down": 0
     },
@@ -97,7 +148,17 @@
         }
       ],
       "comments": [
-
+        {
+          "id": "123qweasd-12qw-34er-as23-gdhajbvg124a"
+        }
+      ],
+      "userData": [
+        {
+          "id": "123qweasd-12qw-34er-as23-gdhajbvg124a"
+        },
+        {
+          "id": "b5796867-4679-4bb4-afdf-2d4119691895"
+        }
       ]
     },
     {

@@ -68,3 +68,7 @@ h3{
     padding-left: 1em;
     padding-top: .5em;
 }
+
+.comment-point{
+    overflow-y: scroll;
+}

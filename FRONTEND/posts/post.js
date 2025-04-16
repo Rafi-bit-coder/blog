@@ -1,3 +1,9 @@
+let temporary = {
+    id: '12asgd',
+    userName: 'Developer',
+    avatar: ''
+}
+
 const container = document.querySelector('.container')
 const urlparam = new window.URLSearchParams(document.location.search)
 const id = urlparam.get('id')
@@ -23,7 +29,9 @@ function autoResize(textArea) {
 
 function postCommen () {
     let value = comment_value.value
-    console.log(value)
+    fetch(`http://127.0.0.1:8080/comment`, {method: 'POST', body: JSON.stringify({blogId: id, comment: value,
+        user: temporary
+    })})
 }
 
 post_comment.onclick = postCommen
@@ -41,22 +49,20 @@ fetch(`http://127.0.0.1:8080/posts?id=${id}`, {method: "GET"})
             <h2>${data.userid.userName}</h2>
         `
         if(data.body.comments?.length) {
-            console.log('ada')
             data.body.comments?.map(a => {
-                comment_container.innerHTML = `
+                comment_container.innerHTML += `
                     <div class="comments ${a.id}" >
                         <i class="fa-solid fa-circle-user"></i>
-                        <a href="#${a.user.id}">${a.user.username}</a>
+                        <a href="#${a.user.id}">${a.user.userName}</a>
                         <p>${a.message}</p>
                     </div>
                 `
             })
         } else {
-            console.log('tidak')
             comment_container.textContent = `no one has comment yet`
         }
     } else {
-        
+        document.getElementsByTagName('body')[0].innerHTML = data.reason
     }
 })
 .catch(err => {container.textContent = `tell the CS that the posts page is broken`; console.error(`error occured: `, err)})
