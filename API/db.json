@@ -45,6 +45,106 @@
           },
           "message": "oopsiee theres a typo :D",
           "replies": []
+        },
+        {
+          "id": "dca80fd1-f367-4501-8d3b-6123481b737e",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "asdasdasd'\n\nasdasdasdasd\n\n",
+          "replies": []
+        },
+        {
+          "id": "63a5a155-6118-41de-88cd-c499301cd8c1",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "testing with long sentence to see what will happen if its overflowing the width heheheh eheheheheh ehehehehe hehehehe heheheh eheheh ehehgeh ehehehe hehehe heheheh ehehehe heheh eheheh eheheheh eheheh eheheh eheheheh eheh",
+          "replies": []
+        },
+        {
+          "id": "bb2d6249-d589-4bb0-b969-8490050cc075",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "ohh yeah now i've changed the input method from textarea to div",
+          "replies": []
+        },
+        {
+          "id": "7af80891-4ced-4e75-9f8b-d618f379d106",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "now checking with new lineaa",
+          "replies": []
+        },
+        {
+          "id": "d13de5c5-63f9-4dfb-8945-29ace71d1e03",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "shit its not making a newline ",
+          "replies": []
+        },
+        {
+          "id": "aac2e576-d2df-48dc-a0ba-805e9ec06dcf",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "asd ",
+          "replies": []
+        },
+        {
+          "id": "ac7b16f2-7d6a-4c5b-bfcd-4cf2678100d9",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "now theres is no extra whitespace",
+          "replies": []
+        },
+        {
+          "id": "9bd8606c-bfe3-4d29-b4a1-f724f1f2dd28",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "is anyone know how to edit the position of a scrollbar?",
+          "replies": []
+        },
+        {
+          "id": "a55474f3-037a-4169-8bdf-a06e881c32a4",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "testing with enter to post the comment",
+          "replies": []
+        },
+        {
+          "id": "c1bb5416-7409-4547-9ae5-ddb8a0b71352",
+          "user": {
+            "id": "12asgd",
+            "userName": "Developer",
+            "avatar": ""
+          },
+          "message": "if you use pc or laptop you can press SHIFT + SPACE to create a newline but the result will not have a newline i dont know why",
+          "replies": []
         }
       ],
       "up": 0,
@@ -157,7 +257,7 @@
           "id": "123qweasd-12qw-34er-as23-gdhajbvg124a"
         },
         {
-          "id": "b5796867-4679-4bb4-afdf-2d4119691895"
+          "id": "c1bb5416-7409-4547-9ae5-ddb8a0b71352"
         }
       ]
     },

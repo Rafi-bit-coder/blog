@@ -5,6 +5,8 @@
     padding: 0;
     color: black;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 .container{
@@ -21,6 +23,9 @@ h3{
 }
 
 .rating-section{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 1.5em;
 }
 
@@ -29,18 +34,33 @@ h3{
 .comment{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: .2em;
+    background-color: rgb(243, 243, 243);
+    border-radius: .5em;
+    padding: 1em;
 }
 
 .comment-point{
-    height: 100px;
+    height: 20em;
     background-color: rgb(243, 243, 243);
+    font-size: 1.3em;
+    padding-bottom: 1em;
+    overflow-y: scroll;
+}
+
+.comment-point::-webkit-scrollbar{
+    height: 200px;
 }
 
 .add-comment{
     background-color: rgb(228, 228, 228);
+    border-radius: 1em;
+    padding: .6em;
+    resize: none;
     border: none;
+}
+
+.add-comment:empty::before{
+    content: attr(placeholder);
 }
 
 .add-comment:focus{
@@ -65,10 +85,12 @@ h3{
 }
 
 .comments{
-    padding-left: 1em;
-    padding-top: .5em;
+    padding: 1em;
+    margin-top: .3em;
+    background-color: rgb(233, 233, 233);
+    border-radius: .5em;
 }
 
-.comment-point{
-    overflow-y: scroll;
+.comments > p{
+    padding-left: 1.4em;
 }
